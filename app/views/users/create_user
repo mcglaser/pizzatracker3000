@@ -1,0 +1,8 @@
+<h3>Sign-Up And Start Logging Your Pies</h3>
+<br>
+<form method="POST" action="/signup">
+ <p>Create A Username:<input type="text" name="username"></p>
+ <p>Your Email Address:<input type="text" name="email"></p>
+  <p>Choose A Password:<input type="text" name="password"></p>
+<button type="submit" value="submit">Submit</button>
+</form>
