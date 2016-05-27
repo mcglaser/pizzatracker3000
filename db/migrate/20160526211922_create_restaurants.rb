@@ -5,6 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :address
       t.string :city
       t.integer :rating
+      t.integer :user_id
     end
   end
 end
