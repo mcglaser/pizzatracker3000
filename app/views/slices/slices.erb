@@ -1,1 +1,13 @@
-<h1>You are Logged In!</h1>
+<h1>Welcome To Pizza Tracker 3000 <%=current_user.username.capitalize %></h1>
+<br>
+<h1><a href="/slices/new">Log A Slice</a></h1>
+<br>
+
+
+  <% Restaurant.all.each do |restaurant| %>
+    <p>Pizzeria Name: <a href="/slices/<%=restaurant.id%>"><%= restaurant.name %></a></p>
+    <p>Pizzeria Address: <%= restaurant.address %></p>
+    <p>Pizzeria City: <%= restaurant.city %></p>
+    <p>Pizzeria Rating: <%= restaurant.rating %></p>
+    <br>
+  <% end %>
