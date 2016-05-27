@@ -79,5 +79,38 @@ class ApplicationController < Sinatra::Base
       end
    end
 
+   get '/slices/new' do
+    if !session[:user_id]
+      redirect to 'login'
+    else
+      erb :'/slices/create_restaurant'
+    end
+  end
+
+
+
+  post '/slices' do
+    if params[:name] == ""
+      redirect to "/slices/new"
+    else
+      user = User.find_by_id(session[:user_id])
+      @restaurant = Restaurant.create(name: params[:name], address: params[:address], city: params[:city], rating: params[:rating], user_id: user.id)
+      redirect to "/slices/#{@restaurant.id}"
+    end
+   end
+
+
+   get '/slices/:id' do
+       if !session[:user_id]
+         redirect to '/login'
+       else
+         @restaurant = Restaurant.find_by_id(params[:id])
+         erb :'slices/show_restaurant'
+       end
+     end
+
+
+
+
 
 end
