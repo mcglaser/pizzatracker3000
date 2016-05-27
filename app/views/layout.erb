@@ -11,7 +11,14 @@
   </head>
   <body>
     <nav>
-      <div class="login"><h2><a href="/signup">Sign Up</a> | Log In</h2></div>
+      <div class="login"><h2>
+
+
+      <% if logged_in? %>
+      <a href="/logout">Log Out</a>
+
+      <% else %>
+      <a href="/signup">Sign Up</a> | <a href="/login">Log In</a><%end %></h2></div>
       <div class="logo">  <h1>Pizza Tracker 3000 <a href="/"><img src="http://i.imgur.com/8RpYebt.jpg" alt="Pizza Tracker 3000 Logo"  height="65" width="61"></a> Log A Slice • Find A Slice</h1>
       </div>
 
