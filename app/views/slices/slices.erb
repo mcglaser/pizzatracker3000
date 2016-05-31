@@ -3,6 +3,8 @@
 <h1><a href="/slices/new">Log A Slice</a></h1>
 <br>
 
+<h1>Your Previously Logged Slices Are Listed Below:</h1>
+<br>
 
   <% Restaurant.all.each do |restaurant| %>
     <p>Pizzeria Name: <a href="/slices/<%=restaurant.id%>"><%= restaurant.name %></a></p>
