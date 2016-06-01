@@ -1,5 +1,10 @@
 <h3>Sign-Up And Start Logging Your Pies</h3>
 <br>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+  <br>
+  <br>
+<% end %>
 <form method="POST" action="/signup">
  <p>Create A Username:<input type="text" name="username"></p>
  <p>Your Email Address:<input type="text" name="email"></p>
