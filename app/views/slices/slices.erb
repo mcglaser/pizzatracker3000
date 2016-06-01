@@ -6,7 +6,7 @@
   <h1>Your Previously Logged Slices Are Listed Below:</h1>
   <br>
 
-  <% current_user.restaurants.all.each do |restaurant| %>
+  <% @restaurants.each do |restaurant| %>
     <p>Pizzeria Name: <a href="/slices/<%=restaurant.id%>"><%= restaurant.name %></a></p>
     <p>Pizzeria Address: <%= restaurant.address %></p>
     <p>Pizzeria City: <%= restaurant.city %></p>
