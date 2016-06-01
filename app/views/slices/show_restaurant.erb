@@ -1,4 +1,4 @@
-<h1>Your Happy Pizza Memory</h1>
+<h1>Your Happy Pizza Memory:</h1>
 <br>
 
 <p><b>Pizzeria Name:</b> <%= @restaurant.name %>
@@ -8,6 +8,20 @@
 
 <br>
 <br>
+
+  <a href="/slices/<%=@restaurant.id%>/edit">Edit Pizzaria</a>
+
+<br>
+<br>
+
 <h1><a href="/slices/new">Log Another Slice</a></h1>
 <br>
 <h1><a href="/slices">See All Of Your Pizzerias</a></h1>
+
+
+<br>
+<br>
+<form method="post" action="/slices/<%=@restaurant.id%>/delete">
+ <input id="hidden" type="hidden" name="_method" value="DELETE">
+ <input type="submit" value="Delete This Pizzeria">
+ </form>
