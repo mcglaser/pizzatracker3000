@@ -6,6 +6,7 @@ class SliceController < ApplicationController
     if !session[:user_id]
         redirect to '/signup'
       else
+        @restaurants = current_user.restaurants.all
         erb :'/slices/slices'
       end
    end
@@ -81,6 +82,15 @@ class SliceController < ApplicationController
         redirect to '/slices'
       end
     end
+
+
+
+
+
+
+
+
+
 
 
 end
