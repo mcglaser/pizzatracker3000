@@ -1,5 +1,10 @@
 <h1>Found A Good Slice? Log It Here!</h1>
 <br>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+  <br>
+  <br>
+<% end %>
 <form method="POST" action="/slices">
 <p>Pizzaria Name: <input type="text" name="name"></p>
 <p>Pizzaria Address: <input type="text" name="address"></p>
