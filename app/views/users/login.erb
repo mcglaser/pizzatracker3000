@@ -1,5 +1,10 @@
 <h3>Login To Your Pizza Tracker Account</h3>
 <br>
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+  <br>
+  <% end %>
+  <br>
 <form method="POST" action="/login">
  <p>Username:<input type="text" name="username"></p>
   <p>Password:<input type="password" name="password"></p>
